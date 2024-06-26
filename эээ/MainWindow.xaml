@@ -1,0 +1,35 @@
+﻿<Window x:Class="эээ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:эээ"
+        mc:Ignorable="d"
+        Title="Практическая 19" Height="450" Width="500" ResizeMode="NoResize" Icon="/46db5ab0b1643199f65eef34933fba16c022b0d5.jpg" >
+    <Grid>
+        <ListBox Name="list" Width="130" Height="300" Margin="0 0 20 30"/>
+        <ListBox Name="list_otv" Width="130" Height="300" Margin="0 0 310 30"/>
+        <Button Width="30" Height="30" Content="?" Margin="300 350 0 0" Click="AboutClick"/>
+        <Button Width="30" Height="30" Content="X" Margin="400 350 0 0" Click="CloseClick"/>
+        <Button Width="115" Height="30" Margin="0 340 320 0" Content="Очистить результат" Name="OtvClear" Click="ClearOtv"/>
+        <Button Width="115" Height="30" Margin="0 340 10 0" Content="Расчитать" Name="rasch" Click="Raschet"/>
+        <Label Height="25" Width="100" Content="Список" Margin="0 0 55 345"/>
+        <Label Height="25" Width="100" Content="Результат" Margin="0 0 350 345"/>
+        <GroupBox Header="Управление списком" Width="150" Height="200" Margin="280 0 0 220" BorderThickness="1,1,1,5">
+            <Grid>
+                <TextBox Width="100" Height="25" Margin="0 0 0 110" Name="zn"/>
+                <Label Width="100" Height="25" Margin="0 0 0 150" Content="Значение"/>
+                <Button Width="100" Height="25" Margin="0 0 0 35" Name="plus" Content="Добавить запись" Click="Dobav"/>
+                <Button Width="100" Height="25" Margin="0 35 0 0" Name="minus" Content="Удалить запись" Click="Ubrav"/>
+                <Button Width="100" Height="25" Margin="0 110 0 0" Name="clear" Content="Очистить список" Click="Clear"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Рандомные значения" Height="150" Width="150" Margin="280 140 0 0">
+            <Grid>
+                <TextBox Width="100" Height="30" Margin="0 0 0 40" Name="random_count"/>
+                <Label Width="105" Height="25" Content="Кол-во значений" Margin="0 0 0 85"/>
+                <Button Width="100" Height="30" Margin="0 50 0 0" Content="Заполнить" Name="random" Click="Random"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
